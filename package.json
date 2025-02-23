@@ -1,0 +1,70 @@
+{
+  "name": "php-legacy-refactor",
+  "displayName": "PHP Legacy Refactor",
+  "description": "PHP Legacy Refactor is a Visual Studio Code extension that analyzes legacy PHP code to detect code smells and outdated practices, providing actionable refactoring suggestions directly within your editor.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Formatters",
+    "Language Packs",
+    "Snippets",
+    "Chat"
+  ],
+  "keywords": [
+    "PHP",
+    "Refactor",
+    "Deprecated",
+    "Legacy",
+    "Code Quality",
+    "Analyzer",
+    "Lint",
+    "Best Practices",
+    "Modern PHP",
+    "Migration",
+    "Upgrade"
+  ],
+  "activationEvents": ["*"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "php-legacy-refactor.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "php-legacy-refactor.runAnalysis",
+        "title": "Run PHP Legacy Refactor Analysis"
+      }
+    ]
+  },
+  "scripts": {
+  "vscode:prepublish": "npm run package",
+  "compile": "tsc",
+  "watch": "tsc -watch",
+  "package": "vsce package",
+  "compile-tests": "tsc -p . --outDir out",
+  "watch-tests": "tsc -p . -w --outDir out",
+  "pretest": "npm run compile-tests && npm run compile && npm run lint",
+  "lint": "eslint src",
+  "test": "vscode-test"
+},
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.19",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "vscode": "^1.1.37",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,55 @@
+{
+    "each": "foreach",
+    "split": "explode",
+    "join": "implode",
+    
+    "ereg": "preg_match",
+    "ereg_replace": "preg_replace",
+    "eregi": "preg_match",
+    "eregi_replace": "preg_replace",
+    
+    "mysql_query": "mysqli_query",
+    "mysql_connect": "mysqli_connect",
+    "mysql_fetch_array": "mysqli_fetch_assoc",
+    "mysql_fetch_assoc": "mysqli_fetch_assoc",
+    "mysql_fetch_row": "mysqli_fetch_row",
+    "mysql_num_rows": "mysqli_num_rows",
+    "mysql_result": "mysqli_fetch_assoc",
+    "mysql_select_db": "mysqli_select_db",
+    "mysql_close": "mysqli_close",
+    
+    "get_magic_quotes_gpc": "false",
+    "set_magic_quotes_runtime": "false",
+    "get_magic_quotes_runtime": "false",
+    
+    "create_function": "fn() => {}",
+    
+    "define_syslog_variables": "use constants directly",
+    "dl": "use dynamic extensions in php.ini instead",
+    "set_socket_blocking": "stream_set_blocking",
+    "session_register": "use \\$_SESSION instead",
+    "session_unregister": "unset \\$_SESSION[...]",
+    "session_is_registered": "isset \\$_SESSION[...]",
+    "strftime": "date()",
+    "mcrypt_encrypt": "openssl_encrypt",
+    "mcrypt_decrypt": "openssl_decrypt",
+    "mcrypt_generic": "openssl_encrypt",
+    "mcrypt_get_iv_size": "random_bytes()",
+    "mcrypt_create_iv": "random_bytes()",
+    "mcrypt_get_key_size": "openssl_cipher_key_length()",
+    "mcrypt_module_open": "use OpenSSL instead",
+    "mcrypt_module_close": "use OpenSSL instead",
+    "mcrypt_module_get_algo_key_size": "openssl_cipher_key_length()",
+    "mcrypt_module_get_algo_block_size": "openssl_cipher_block_length()",
+    
+    "ini_alter": "ini_set()",
+    
+    "array_key_exists": "isset(\\$array[key]) where applicable",
+    
+    "http_build_query": "http_build_query with PHP 8.1 options",
+    
+    "strrchr": "str_contains",
+    "fgetss": "fgets with strip_tags()",
+    
+    "ReflectionType::__toString": "ReflectionNamedType::getName()"
+}
